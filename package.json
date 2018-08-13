@@ -1,0 +1,14 @@
+{
+	"name": "royal-moutain-campground",
+	"description": "Royal Mountain Campground Responsive Website",
+	"author": "Jeffrey Herb",
+	"version": "0.1.0",
+	"devDependencies": {
+		"grunt": "^1.0.3",
+		"grunt-contrib-connect": "^1.0.2",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-sass": "^3.0.1",
+		"load-grunt-tasks": "^4.0.0",
+		"node-sass": "^4.9.3"
+	}
+}
