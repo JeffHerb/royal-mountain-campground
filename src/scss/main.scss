@@ -1,2 +1,10 @@
 // Vendor
-@import "_vendor/_normalize"
+@import "_vendor/_normalize";
+
+// Utilities
+@import "_utils/_variables";
+
+// Site Styles
+@import "_base/_global";
+@import "_base/_hero";
+@import "_base/_header";

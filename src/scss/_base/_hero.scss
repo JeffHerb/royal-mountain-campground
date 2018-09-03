@@ -1,0 +1,13 @@
+.hero {
+	align-items: center;
+	background-image: url('../images/hero-test-image.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	height: 75vh;
+	text-align: center;
+	width: 100vw;
+}
