@@ -1,3 +1,50 @@
 html, body {
 	background: $PrimaryBrown;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $PrimaryHeaderFont;
+}
+
+p, ul, ol, li, span, div, input, legend, i, b, header, footer {
+	font-family: $PrimaryBodyFont;
+}
+
+main {
+	background: $white;
+	display: inline-block;
+
+	main section {
+		overflow: auto;
+	}
+}
+
+footer {
+	background: $FootBackground;
+	color: $white;
+	padding: 2em;
+}
+
+@media screen {
+	section { 
+		font-size: 115%; 
+		padding: 0 5%;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+    section { font-size:110%; } /* Increase the font size */
+}
+@media screen and (min-width:1400px) {
+    section { padding:0 15%; } /* Reduce the container width */
+}
+@media screen and (min-width:1600px) {
+    section { font-size:105%; } /* Increase the font size */
+}
+@media screen and (min-width:1800px) {
+    section { padding:0 20%; } /* Reduce the container width */
+}
+
+section > section {
+	padding: 0;
+}

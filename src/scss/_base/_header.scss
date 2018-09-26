@@ -1,11 +1,36 @@
 header.site-header {
-	background: $PrimaryBrown;
+	background: $blackRGBA;
+	font-family: $PrimaryHeaderFont;
 	height: 90px;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 
-	h1 {
-		color: $PrimaryHeaderWhite;
+	.site-header-inner {
+		margin: $desktopSectionMargin;
+
+		h1 {
+			color: $white;
+			display: inline-block;
+			margin: 0;
+		}
+
+		nav {
+			float: right;
+
+			ul {
+				margin: 0;
+			}
+
+			a {
+				color: $white;
+				cursor: pointer;
+				display: inline-block;
+				margin-left: 2em;
+				padding: 1em 0.75em;
+				text-decoration: none;
+			}
+
+		}
 	}
 
 }

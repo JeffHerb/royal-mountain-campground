@@ -1,7 +1,19 @@
 // Color Pallet
 $PrimaryBrown: #34271E;
+$PrimaryBrownRGBA: rgba(0, 0, 0, .75);
 $PrimaryGreen: #2E5445;
 $PrimaryBlue:  #2E969C;
+
+// Footer Pallet
+$FootBackground: #333;
+
+// Standard Color
+$white: #FFF;
+$black: #000;
+$blackRGBA: rgba(0, 0, 0, .75);
+
+// Desktop Container Margin
+$desktopSectionMargin: 1.7em 2em 1em;
 
 // Controls:
 $PrimaryButton: #58BE9D;
@@ -9,3 +21,14 @@ $SecondayButton: false;
 
 // Text Header
 $PrimaryHeaderWhite: #F7F9E5;
+
+// Fonts
+$PrimaryHeaderFont: 'Spectral';
+$PrimaryBodyFont: 'Karla';
+
+// Breakpoints
+$smallTablet: 480px;
+$tablet: 736px;
+$largeTablet: 980px;
+$desktop: 1280px;
+$largdesktop: 1690px;

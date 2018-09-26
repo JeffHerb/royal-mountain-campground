@@ -21,6 +21,14 @@ module.exports = grunt => {
       },
 
       copy: {
+        font: {
+          expand: true,
+          cwd: 'src/fonts/',
+          src: ['**/*.eot', '**/*.svg', '**/*.ttf', '**/*.woff', '**/*.woff2', '**/*.otf'],
+          dest: 'dist/fonts',
+          flatten: true,
+          filter: 'isFile',
+        },
         html: {
           expand: true,
           cwd: 'src/html/',
