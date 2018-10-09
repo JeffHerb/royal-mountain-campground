@@ -21,3 +21,20 @@
     font-style: normal;
 }
 
+// Font and section sizing
+@media screen and (min-width: $tablet) {
+    section { font-size:110%; } /* Increase the font size */
+}
+@media screen and (min-width:1400px) {
+    section { padding:0 15%; } /* Reduce the container width */
+}
+@media screen and (min-width:1600px) {
+    section { font-size:105%; } /* Increase the font size */
+}
+@media screen and (min-width:1800px) {
+    section { padding:0 20%; } /* Reduce the container width */
+}
+
+.footnote-font {
+    font-size: 14px;
+}

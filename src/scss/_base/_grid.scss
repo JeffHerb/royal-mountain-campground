@@ -1,0 +1,28 @@
+
+.css-grid {
+	display: block;
+
+	@include pointbreak($largeTablet) {
+
+		&.two-column {
+			display: -ms-grid;
+			display: grid;
+
+		 	grid-gap: 20px;
+			-ms-grid-columns: 50% 20px 50%;
+			-ms-grid-rows: 100%;
+			grid-template-columns: 50% 50%;
+			grid-gap: 10px;
+
+			.column:nth-of-type(odd) {
+				-ms-grid-column: 1;
+			}
+
+			.column:nth-of-type(even) {
+				-ms-grid-column: 3;
+			}
+		}
+
+	}
+
+}

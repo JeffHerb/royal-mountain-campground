@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $PrimaryHeaderFont;
 }
 
-p, ul, ol, li, span, div, input, legend, i, b, header, footer {
+p, ul, ol, li, span, div, input, legend, i, b, header, footer, table, th, td {
 	font-family: $PrimaryBodyFont;
 }
 
@@ -26,25 +26,110 @@ footer {
 }
 
 @media screen {
-	section { 
+	section, table { 
 		font-size: 115%; 
 		padding: 0 5%;
 	}
 }
 
-@media screen and (min-width: $tablet) {
-    section { font-size:110%; } /* Increase the font size */
-}
-@media screen and (min-width:1400px) {
-    section { padding:0 15%; } /* Reduce the container width */
-}
-@media screen and (min-width:1600px) {
-    section { font-size:105%; } /* Increase the font size */
-}
-@media screen and (min-width:1800px) {
-    section { padding:0 20%; } /* Reduce the container width */
-}
-
 section > section {
 	padding: 0;
 }
+
+#about-us {
+	@include pointbreak($desktop) {
+		& > section {
+			max-width: $desktop;
+		}
+	}
+}
+
+.responsive-tables {
+	padding: 0;
+	width: 100%;
+
+	thead {
+		display: none;
+		speak: none;
+	}
+
+	tbody {
+
+		tr {
+			display: block;
+
+			th, td {
+				display: block;
+			}
+
+			.site-type {
+				text-align: center;
+			}
+		}
+
+	}
+
+	th, td {
+		padding: 7px;
+	}
+
+	tfoot {
+		td {
+			padding: 2px 2px 2px 7px;
+		}
+	}
+
+	@include pointbreak(700px) {
+		border-collapse: collapse;
+		margin-bottom: 10px;
+		width: 615px;
+
+		thead, tbody {
+			tr {
+				&.site-type {
+					width: 400px;
+				}
+
+				th, td {
+					padding: 10px;
+				}
+			}
+		}
+
+		thead {
+			display: table-header-group;
+
+			tr {
+				background: $tableHeaderColor;
+				color: $white;
+			}
+		}
+
+		tbody {
+
+			tr {
+				display: table-row;
+
+				th, td {
+					display: table-cell;
+
+					.site-type-title-mobile {
+						display: none;
+						speak: none;
+					}
+				}
+
+				.site-type {
+					text-align: left;
+				}
+			}
+
+			tr:nth-child(even) {
+				background: $tableRowStripColor;
+			}
+
+		}
+
+	}
+}
+

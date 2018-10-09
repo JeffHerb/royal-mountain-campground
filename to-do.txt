@@ -1,0 +1,1 @@
+[ ] - Remove header on mobile/table
