@@ -25,4 +25,10 @@
 
 	}
 
+	@include pointbreak($largeTablet) {
+
+		margin: 0 auto;
+		max-width: $desktop;
+	}
+
 }
