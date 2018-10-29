@@ -13,17 +13,22 @@ p, ul, ol, li, span, div, input, legend, i, b, header, footer, table, th, td {
 main {
 	background: $white;
 	display: inline-block;
+	overflow: hidden;
 
 	main section {
 		overflow: auto;
 	}
 
-
 	@include pointbreak($largeTablet) {
 
-		& section .contents > header {
-			margin: 0 auto;
-			max-width: $desktop;
+		& section .contents {
+			min-height: 30px;
+
+			& > header {
+				margin: 0 auto;
+				max-width: $desktop;
+			}
+
 		}
 
 	}
@@ -36,9 +41,50 @@ footer {
 }
 
 @media screen {
+
+	section.green-section {
+		background-color: $PrimaryButton;
+
+		header {
+			color: $white;
+		}
+
+		ul {
+			color: $white;
+		}
+	}
+
 	section, table { 
 		font-size: 115%; 
 		padding: 0 5%;
+		padding-bottom: 35px;
+	}
+
+	section {
+		& > div.contents {
+			overflow: hidden;
+
+			& > header {
+				margin-top: 15px;
+				margin-bottom: 20px;
+			}
+
+			ul {
+				list-style: none;
+				margin: 10px 0 0 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.topic-icon {
+		text-align: center;
+
+		i {
+			margin-top: 25px;
+			margin-bottom: 10px;
+		}
+
 	}
 }
 
@@ -149,6 +195,15 @@ section > section {
 
 	}
 }
+#amenities ul {
+	text-align: center;
+
+	@include pointbreak($largeTablet) {
+		margin-left: 20%;
+		text-align: left;
+	}
+}
+
 
 .extra-padding {
 	padding: 20px;
@@ -156,4 +211,11 @@ section > section {
 
 .center-text {
 	text-align: center;
+}
+
+.accessible-text {
+	position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }

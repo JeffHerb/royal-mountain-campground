@@ -4,6 +4,10 @@
 
 	@include pointbreak($largeTablet) {
 
+	}
+
+	@include pointbreak($largeTablet) {
+
 		&.two-column {
 			display: -ms-grid;
 			display: grid;
@@ -20,6 +24,28 @@
 
 			.column:nth-of-type(even) {
 				-ms-grid-column: 3;
+			}
+		}
+
+		&.three-column {
+			display: -ms-grid;
+			display: grid;
+
+		 	grid-gap: 20px;
+			-ms-grid-columns: 33% 20px 33% 20px 33%;
+			-ms-grid-rows: 100%;
+			grid-template-columns: 33% 33% 33%;
+
+			.column:nth-child(1) {
+				-ms-grid-column: 1;
+			}
+
+			.column:nth-child(2) {
+				-ms-grid-column: 3;
+			}
+
+			.column:nth-child(3) {
+				-ms-grid-column: 5;
 			}
 		}
 

@@ -11,7 +11,8 @@ header.site-header {
 		h1 {
 			color: $white;
 			display: inline-block;
-			margin: 0;
+			font-size: 32px;
+			margin: 7px 0 0 0;
 
 			a {
 				color: $white;
@@ -19,22 +20,42 @@ header.site-header {
 			}
 		}
 
+		// Hide largerview nav
 		nav {
-			float: right;
+			display: none;
+		}
 
-			ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
+		@include pointbreak($desktop) {
+
+			.global-menu-button {
+				display: none;
+				//speak: none;
 			}
 
-			a {
-				color: $white;
-				cursor: pointer;
-				display: inline-block;
-				margin-left: 2em;
-				padding: 1em 0.75em;
-				text-decoration: none;
+			h1 {
+				a {
+
+				}
+			}
+
+			nav {
+				float: right;
+
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				a {
+					color: $white;
+					cursor: pointer;
+					display: inline-block;
+					margin-left: 2em;
+					padding: 1em 0.75em;
+					text-decoration: none;
+				}
+
 			}
 
 		}

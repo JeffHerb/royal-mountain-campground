@@ -40,7 +40,7 @@ module.exports = grunt => {
         images: {
           expand: true,
           cwd: 'src/images/',
-          src: ['**/*.jpg', '**/*.png', '**/*.gif'],
+          src: ['**/*.jpg', '**/*.png', '**/*.gif', '**/*.svg'],
           dest: 'dist/images/',
           flatten: true,
           filter: 'isFile',

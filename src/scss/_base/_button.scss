@@ -2,6 +2,22 @@
     background: $PrimaryButton;
     border-radius: 4px;
     color: $white;
+    display: inline-block;
     padding: 17px 10px;
     text-decoration: none;
+}
+
+.global-menu-button {
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    padding: 10px 12px;
+    margin-right: 15px;
+    position: relative;
+    top: -5px;
+
+    &:hover {
+        background: $white;
+        color: $black;
+    }
 }
