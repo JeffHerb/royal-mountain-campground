@@ -13,7 +13,7 @@ p, ul, ol, li, span, div, input, legend, i, b, header, footer, table, th, td {
 main {
 	background: $white;
 	display: inline-block;
-	overflow: hidden;
+	width: 100%;
 
 	main section {
 		overflow: auto;
@@ -32,12 +32,24 @@ main {
 		}
 
 	}
+
+	& > section.sub-page {
+		margin-top: 90px;
+	}
 }
 
 footer {
 	background: $FootBackground;
 	color: $white;
 	padding: 2em;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	main {
+		flex: 1;
+	}
 }
 
 @media screen {
@@ -79,11 +91,6 @@ footer {
 
 	.topic-icon {
 		text-align: center;
-
-		i {
-			margin-top: 25px;
-			margin-bottom: 10px;
-		}
 
 	}
 }
@@ -195,15 +202,29 @@ section > section {
 
 	}
 }
-#amenities ul {
-	text-align: center;
 
-	@include pointbreak($largeTablet) {
-		margin-left: 20%;
-		text-align: left;
+#amenities {
+
+	.topic-icon {
+		margin-bottom: 20px;
+		margin-top: 30px;
 	}
-}
 
+	ul {
+		text-align: center;
+		margin-top: 0;
+
+		@include pointbreak($largeTablet) {
+			padding: 0;
+			margin-top: 10px;
+		}
+	}
+
+	.contents {
+		padding-bottom: 20px;
+	}
+
+}
 
 .extra-padding {
 	padding: 20px;

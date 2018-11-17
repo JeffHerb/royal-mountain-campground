@@ -6,17 +6,33 @@ header.site-header {
 	width: 100%;
 
 	.site-header-inner {
-		margin: 1.25em 2em 1em;
+		margin: 1.25em 0.5em 1em;
+		position: relative;
+
+		@include pointbreak(650px) {
+			margin: 1.25em 2em 1em;
+		}
 
 		h1 {
 			color: $white;
 			display: inline-block;
-			font-size: 32px;
+			font-size: 24px;
 			margin: 7px 0 0 0;
+			top: -13px;
+			position: absolute;
 
 			a {
 				color: $white;
 				text-decoration: none;
+			}
+
+			@include pointbreak(465px) {
+				position: relative;
+				top: -5px;
+			}
+
+			@include pointbreak(650px) {
+				font-size: 32px;
 			}
 		}
 
@@ -29,7 +45,6 @@ header.site-header {
 
 			.global-menu-button {
 				display: none;
-				//speak: none;
 			}
 
 			h1 {
@@ -39,12 +54,16 @@ header.site-header {
 			}
 
 			nav {
+				display: block;
 				float: right;
+				position: relative;
 
 				ul {
 					list-style: none;
 					margin: 0;
 					padding: 0;
+					position: relative;
+					top: -8px;
 				}
 
 				a {
@@ -54,6 +73,14 @@ header.site-header {
 					margin-left: 2em;
 					padding: 1em 0.75em;
 					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&.primary-button {
+						text-decoration: none;
+					}
 				}
 
 			}
