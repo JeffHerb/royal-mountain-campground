@@ -7,10 +7,10 @@ header.site-header {
 
 	.site-header-inner {
 		margin: 1.25em 0.5em 1em;
-		position: relative;
 
 		@include pointbreak(650px) {
 			margin: 1.25em 2em 1em;
+			position: relative;
 		}
 
 		h1 {
@@ -18,7 +18,7 @@ header.site-header {
 			display: inline-block;
 			font-size: 24px;
 			margin: 7px 0 0 0;
-			top: -13px;
+			top: 10px;
 			position: absolute;
 
 			a {
@@ -36,9 +36,22 @@ header.site-header {
 			}
 		}
 
-		// Hide largerview nav
 		nav {
-			display: none;
+			background: #000;
+			display: block;
+			left: -1em;
+			position: absolute;
+
+			@include pointbreak(650px) {
+				left: -2em;
+			}
+
+			a {
+				color: $white;
+				cursor: pointer;
+				text-decoration: none;
+			}
+
 		}
 
 		@include pointbreak($desktop) {
@@ -54,9 +67,10 @@ header.site-header {
 			}
 
 			nav {
-				display: block;
+				background: transparent !important;
+				display: block !important;
 				float: right;
-				position: relative;
+				position: relative !important;
 
 				ul {
 					list-style: none;
@@ -64,15 +78,16 @@ header.site-header {
 					padding: 0;
 					position: relative;
 					top: -8px;
+
+					li {
+						display: inline-block;
+					}
 				}
 
 				a {
-					color: $white;
-					cursor: pointer;
 					display: inline-block;
 					margin-left: 2em;
 					padding: 1em 0.75em;
-					text-decoration: none;
 
 					&:hover {
 						text-decoration: underline;
@@ -86,5 +101,6 @@ header.site-header {
 			}
 
 		}
+
 	}
 }
