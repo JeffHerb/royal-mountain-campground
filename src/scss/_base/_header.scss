@@ -1,106 +1,86 @@
-header.site-header {
-	background: $blackRGBA;
-	font-family: $PrimaryHeaderFont;
-	height: 90px;
-	position: absolute;
-	width: 100%;
+.site-header {
+	background: $FootBackground;
+	display: flex;
+	padding: 1.25em;
+	position: relative;
+	height: 40px;
 
-	.site-header-inner {
-		margin: 1.25em 0.5em 1em;
+	.global-menu-button {
+		position: absolute;
+		height: 48px;
+		top: 15px;
+	}
 
-		@include pointbreak(650px) {
-			margin: 1.25em 2em 1em;
-			position: relative;
-		}
-
-		h1 {
+	h1 {
+		flex: 1;
+		text-align: center;
+		//margin-left: 50px;
+		
+		a {
 			color: $white;
 			display: inline-block;
-			font-size: 24px;
-			margin: 7px 0 0 0;
-			top: 10px;
-			position: absolute;
+			font-size: 75%;
+			text-decoration: none;
+			margin-top: -5px;
+			width: 315px;
+		}
+	}
+
+	// @include pointbreak(475px) {
+
+	// 	h1 {
+
+	// 		a {
+	// 			width: auto;
+	// 		}
+
+	// 	}
+
+	// }
+
+	@include pointbreak(600px) {
+
+		h1 {
 
 			a {
-				color: $white;
-				text-decoration: none;
-			}
-
-			@include pointbreak(465px) {
-				position: relative;
-				top: -5px;
-			}
-
-			@include pointbreak(650px) {
-				font-size: 32px;
-			}
-		}
-
-		nav {
-			background: #000;
-			display: block;
-			left: -1em;
-			position: absolute;
-
-			@include pointbreak(650px) {
-				left: -2em;
-			}
-
-			a {
-				color: $white;
-				cursor: pointer;
-				text-decoration: none;
-			}
-
-		}
-
-		@include pointbreak($desktop) {
-
-			.global-menu-button {
-				display: none;
-			}
-
-			h1 {
-				a {
-
-				}
-			}
-
-			nav {
-				background: transparent !important;
-				display: block !important;
-				float: right;
-				position: relative !important;
-
-				ul {
-					list-style: none;
-					margin: 0;
-					padding: 0;
-					position: relative;
-					top: -8px;
-
-					li {
-						display: inline-block;
-					}
-				}
-
-				a {
-					display: inline-block;
-					margin-left: 2em;
-					padding: 1em 0.75em;
-
-					&:hover {
-						text-decoration: underline;
-					}
-
-					&.primary-button {
-						text-decoration: none;
-					}
-				}
-
+				font-size: 80%;
+				width: auto;
 			}
 
 		}
 
 	}
+
+	@include pointbreak(600px) {
+
+		h1 {
+
+			a {
+				font-size: 100%;
+				padding-top: 6px;
+			}
+
+		}
+
+	}
+
+	@include pointbreak($largeTablet) {
+
+		display: block;
+		height: 50px;
+
+		.global-menu-button {
+			display: none;
+		}
+
+		h1 {
+			text-align: left;
+
+			a {
+				padding-top: 8px;
+			}
+		}
+
+	}
+
 }

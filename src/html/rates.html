@@ -6,32 +6,35 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<article>
-			<header class="site-header">
-				<section class="site-header-inner">
-					<h1><a href="index.html">Royal Mountain Campground</a></h1>
-					<nav role="navigation">
-						<ul>
-							<li>
-								<a href="rates.html">Rates</a>
-								<a href="https://reserve2.resnexus.com/resnexus/reservations/lodging/BE930D72-05E4-4BEF-BE3A-32C08AF01CA0" class="button primary-button" role="button"> Check Availability </a>
-							</li>
-						</ul>
-					</nav>
-				</section>
-			</header>
-			<main>
-				<section class="hero">
-					<div class="hero-inner">
-					</div>
-				</section>
-				<section id="rates" class="white-section">
-					<header>
-						<h2>
-							2018 Camping Rates
-						</h2>
-					</header>
-					<section>
+		<header class="site-header">
+			<button class="global-menu-button">
+				<span class="menu-icon" id="menu-icon"></span>
+				<span class="accessible-text">Global Menu</span>
+			</button>
+			<h1><a href="index.html">Royal Mountain Campground</a></h1>
+		</header>
+		<nav role="navigation" id="global-nav">
+			<ul>
+				<li>
+					<a href="rules.html">Rules</a>
+				</li>
+				<li>
+					<a href="rates.html">Rates</a>
+				</li>
+				<li class="button-nav">
+					<a href="https://reserve2.resnexus.com/resnexus/reservations/lodging/BE930D72-05E4-4BEF-BE3A-32C08AF01CA0" class="button primary-button" role="button"> Check Availability </a>
+				</li>
+			</ul>
+		</nav>
+		<main class="header-height-offset">
+			<section id="rates" class="white-section">
+				<header class="extra-top-padding">
+					<h2>
+						2018 Camping Rates
+					</h2>
+				</header>
+				<section class="centered-table">
+					<div class="table-wrapper">	
 						<header>
 							<h3>Camping Sites:</h3>
 						</header>
@@ -123,9 +126,11 @@
 								</tr>
 							</tfoot>
 						</table>
-					</section>
+					</div>
+				</section>
 
-					<section>
+				<section class="centered-table">
+					<div class="table-wrapper">
 						<header>
 							<h3>Rentals:</h3>
 						</header>
@@ -187,16 +192,16 @@
 								</tr>
 							</tbody>
 						</table>
-					</section>
+					</div>
 				</section>
-			</main>
-			<footer>
-				<section class="container">
-					<p>
-						Royal Mountain Campground / TDX Data Service - All Rights Reserved - 2017-2018
-					</p>
-				</section>
-			</footer>
-		</article>
+			</section>
+		</main>
+		<footer>
+			<section class="container">
+				<p>
+					Royal Mountain Campground / TDX Data Service - All Rights Reserved - 2017-2018
+				</p>
+			</section>
+		</footer>
 	</body>
 </html>
