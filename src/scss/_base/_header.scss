@@ -14,7 +14,6 @@
 	h1 {
 		flex: 1;
 		text-align: center;
-		//margin-left: 50px;
 		
 		a {
 			color: $white;
@@ -25,18 +24,6 @@
 			width: 315px;
 		}
 	}
-
-	// @include pointbreak(475px) {
-
-	// 	h1 {
-
-	// 		a {
-	// 			width: auto;
-	// 		}
-
-	// 	}
-
-	// }
 
 	@include pointbreak(600px) {
 

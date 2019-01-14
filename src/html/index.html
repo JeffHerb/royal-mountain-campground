@@ -43,8 +43,10 @@
 					</header>
 					<div class="css-grid two-column">
 						<div class="column">
-							<div class="google-map">	
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.9048431597216!2d-74.5247627837028!3d43.043433579146836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89deeb4a0612bcaf%3A0x629b46754b768fa5!2s4948+NY-29%2C+Johnstown%2C+NY+12095!5e0!3m2!1sen!2sus!4v1539455594255" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<div class="google-map">
+								<div class="iframe-wrapper" style="height: 100%; width: 100%;">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.9048431597216!2d-74.5247627837028!3d43.043433579146836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89deeb4a0612bcaf%3A0x629b46754b768fa5!2s4948+NY-29%2C+Johnstown%2C+NY+12095!5e0!3m2!1sen!2sus!4v1539455594255" width="100%" frameborder="0" style="border:0; height: 100%;" allowfullscreen></iframe>
+								</div>
 							</div>
 						</div>
 						<div class="column">
@@ -110,47 +112,40 @@
 			</section>
 			<section id="gallary">
 				<div class="contents">
-				</div>
-			</section>
-			<!-- <section id="about-us" class="green-section">
-				<div class="contents">
-					<div class="css-grid two-column">
-						<div class="column">
-							<p>Royal Mountain Campground is a family run and family friendly campsite</p>
-							<p>We have many great sites avaliable including:</p>
-							<ul>
-								<li>RV Sites - 45' Max Length</li>
-								<li>Popup and Tent Sites</li>
-								<li>Cabins</li>
-							</ul>
-							<p>
-								Seasonal sites are also available. Contact us for more details.
-							</p>
+					<div class="gallary-wrapper">
+						<div class="gallary-previous gallary-control-container">
+							<button class="gallary-control" id="gallary-previous-button">
+								<span>Previous Image</span>
+							</button>
 						</div>
-						<div class="column">
-							<p><strong>Campground Amenities Include:</strong></p>
-							<ul>
-								<li>Ice Cream Store / Light Food</li>
-								<li>Covered and Enclosed Pavilion</li>
-								<li>Sunny and Shady Sites</li>
-								<li>Nature Trail</li>
-								<li>Volleyball, Badminton, Horseshoes</li>
-								<li>Dumping Station</li>
-								<li>Clean Restrooms and Showers</li>
-								<li>Electric & Water Hookups</li>
-								<li>30amp Electric Service (Two 50amp)</li>
-								<li>Fishing Pond</li>
-								<li>Fire Rings</li>
-								<li>Propane Station</li>
-							</ul>
+						<div class="gallary-wrapper-images">
+							<a class="gallary-item">
+								<img src="images/gallary-1.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+							<a class="gallary-item">
+								<img src="images/gallary-2.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+							<a class="gallary-item">
+								<img src="images/gallary-3.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+							<a class="gallary-item">
+								<img src="images/gallary-4.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+							<a class="gallary-item">
+								<img src="images/gallary-5.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+							<a class="gallary-item">
+								<img src="images/gallary-6.jpg" alt="Aerial view of our campgrounds" />
+							</a>
+						</div>
+						<div class="gallary-next gallary-control-container">
+							<button class="gallary-control" id="gallary-next-button">
+									<span>Next Image</span>
+							</button>
 						</div>
 					</div>
 				</div>
-			</section> -->
-			<!-- <section id="Gallary" class="white-section">
-				<div class="contents">
-				</div>
-			</section>	 -->
+			</section>
 		</main>
 		<footer>
 			<section class="container">
@@ -162,11 +157,29 @@
 		<script>
 			(function() {
 
+				function moveGallary(dir) {
+
+					var gallaryWindow = document.querySelector('.gallary-wrapper-images');
+					var gallaryItems = gallaryWindow.querySelectorAll('.gallary-item');
+
+					var targetItem = false
+
+					if (dir === "left") {
+
+						targetItem = gallaryItems[gallaryItems.length - 1];
+					}
+					else {
+
+						targetItem = gallaryItems[0];
+					}
+
+					console.log(targetItem);
+
+				}
+
 				var globalMenu = document.getElementById('menu-icon');
 				var globalNav = document.getElementById('global-nav');
-
-				// Add Gobal Menu Event Listener
-				console.log(globalMenu);
+				var gallary = document.getElementsByClassName('.gallary-wrapper');
 
 				globalMenu.addEventListener('click', function() {
 					
@@ -180,6 +193,22 @@
 					}
 
 				});
+
+				if (gallary) {
+
+					var gallaryPrevious = document.getElementById('gallary-previous-button');
+					var gallaryNext = document.getElementById('gallary-next-button');
+
+					gallaryPrevious.addEventListener('click', function() {
+						moveGallary('right');
+					});
+
+					gallaryNext.addEventListener('click', function() {
+						moveGallary('left');
+					});
+
+				}
+
 
 			})();
 		</script>
