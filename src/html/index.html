@@ -30,9 +30,9 @@
 			<section class="hero">
 				<div class="hero-inner">
 					<div class="hero-text">
-						<p>
+						<!-- <p>
 							slogon text here!
-						</p>
+						</p> -->
 					</div>
 				</div>
 			</section>
@@ -112,36 +112,15 @@
 			</section>
 			<section id="gallary">
 				<div class="contents">
-					<div class="gallary-wrapper">
-						<div class="gallary-previous gallary-control-container">
-							<button class="gallary-control" id="gallary-previous-button">
-								<span>Previous Image</span>
-							</button>
-						</div>
-						<div class="gallary-wrapper-images">
-							<a class="gallary-item">
+					<div id="slidr-div" style="dislay: block">
+						<div data-slidr="one">
 								<img src="images/gallary-1.jpg" alt="Aerial view of our campgrounds" />
-							</a>
-							<a class="gallary-item">
-								<img src="images/gallary-2.jpg" alt="Aerial view of our campgrounds" />
-							</a>
-							<a class="gallary-item">
-								<img src="images/gallary-3.jpg" alt="Aerial view of our campgrounds" />
-							</a>
-							<a class="gallary-item">
-								<img src="images/gallary-4.jpg" alt="Aerial view of our campgrounds" />
-							</a>
-							<a class="gallary-item">
-								<img src="images/gallary-5.jpg" alt="Aerial view of our campgrounds" />
-							</a>
-							<a class="gallary-item">
-								<img src="images/gallary-6.jpg" alt="Aerial view of our campgrounds" />
-							</a>
 						</div>
-						<div class="gallary-next gallary-control-container">
-							<button class="gallary-control" id="gallary-next-button">
-									<span>Next Image</span>
-							</button>
+						<div data-slidr="two">
+								<img src="images/gallary-2.jpg" alt="Aerial view of our campgrounds" />
+						</div>
+						<div data-slidr="three">
+								<img src="images/gallary-3.jpg" alt="Aerial view of our campgrounds" />
 						</div>
 					</div>
 				</div>
@@ -154,32 +133,12 @@
 				</p>
 			</section>
 		</footer>
+		<script src="js/slidr.min.js"></script>
 		<script>
 			(function() {
 
-				function moveGallary(dir) {
-
-					var gallaryWindow = document.querySelector('.gallary-wrapper-images');
-					var gallaryItems = gallaryWindow.querySelectorAll('.gallary-item');
-
-					var targetItem = false
-
-					if (dir === "left") {
-
-						targetItem = gallaryItems[gallaryItems.length - 1];
-					}
-					else {
-
-						targetItem = gallaryItems[0];
-					}
-
-					console.log(targetItem);
-
-				}
-
-				var globalMenu = document.getElementById('menu-icon');
+				var globalMenu = document.querySelector('.global-menu-button');
 				var globalNav = document.getElementById('global-nav');
-				var gallary = document.getElementsByClassName('.gallary-wrapper');
 
 				globalMenu.addEventListener('click', function() {
 					
@@ -194,22 +153,9 @@
 
 				});
 
-				if (gallary) {
-
-					var gallaryPrevious = document.getElementById('gallary-previous-button');
-					var gallaryNext = document.getElementById('gallary-next-button');
-
-					gallaryPrevious.addEventListener('click', function() {
-						moveGallary('right');
-					});
-
-					gallaryNext.addEventListener('click', function() {
-						moveGallary('left');
-					});
-
-				}
-
-
+				slidr.create('slidr-div', {
+					breadcrumbs: true,
+				}).start();
 			})();
 		</script>
 	</body>

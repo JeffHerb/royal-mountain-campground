@@ -21,6 +21,14 @@ module.exports = grunt => {
       },
 
       copy: {
+        js: {
+          expand: true,
+          cwd: 'src/js/',
+          src: ['**/*.js'],
+          dest: 'dist/js',
+          flatten: true,
+          filter: 'isFile',
+        },
         font: {
           expand: true,
           cwd: 'src/fonts/',

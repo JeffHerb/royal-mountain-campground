@@ -73,47 +73,24 @@
 								</tr>
 								<tr>
 									<td class="site-type">
-										<span clsss="site-type-title">Popups</span>
-									</td>
-									<td>
-										<div>
-											<span class="site-type-title-mobile">Nightly</span>
-											<span>$25.00</span>
-										</div>
-									</td>
-									<td>
-										<div>
-											<span class="site-type-title-mobile">Weekly</span>
-											<span>$150.00</span>
-										</div>
-									</td>
-									<td>
-										<div>
-											<span class="site-type-title-mobile">Monthly</span>
-											<span>$550.00</span>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="site-type">
 										<span clsss="site-type-title">Trailers/Motor Homes</span>
 									</td>
 									<td>
 										<div>
 											<span class="site-type-title-mobile">Nightly</span>
-											<span>$32.00</span>
+											<span>$35.00</span>
 										</div>
 									</td>
 									<td>
 										<div>
 											<span class="site-type-title-mobile">Weekly</span>
-											<span>$175.00</span>
+											<span>$200.00</span>
 										</div>
 									</td>
 									<td>
 										<div>
 											<span class="site-type-title-mobile">Monthly</span>
-											<span>$650.00</span>
+											<span>$700.00</span>
 										</div>
 									</td>
 								</tr>
@@ -144,6 +121,29 @@
 								</tr>
 							</thead>
 							<tbody>
+								<tr>
+									<td class="site-type">
+										<span clsss="site-type-title">Small Cabins</span>
+									</td>
+									<td>
+										<div>
+											<span class="site-type-title-mobile">Nightly</span>
+											<span>$55.00</span>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="site-type-title-mobile">Weekly</span>
+											<span>$275.00</span>
+										</div>
+									</td>
+									<td>
+										<div>
+											<span class="site-type-title-mobile">Monthly</span>
+											<span>$1100.00</span>
+										</div>
+									</td>
+								</tr>
 								<tr>
 									<td class="site-type">
 										<span clsss="site-type-title">Cabins</span>
@@ -202,6 +202,10 @@
 					</div>
 				</section>
 				<section>
+					<p style="text-align:center; max-width: 500px; margin: 0 auto;">
+						Reservations can be made up to one year in advance however two weeks' notice is typically sufficient except for Holiday weekends and Cabin Rentals.<br><br>
+						Cancellation Policy: If for any reason you must cancel your reservation, a 72 hour notice must be given otherwise you will be charged for the full reservation. The cancellation fee for less than 72 hours is one night (tw nights for Holiday weekends). Instead of cancelling, you may reschedule your visit and the deposit will be applied to the new date.
+					</p>
 					<p style="text-align:center">
 						Checking: 3:00 PM<br>
 						Checkout: 10:00 AM
@@ -216,5 +220,26 @@
 				</p>
 			</section>
 		</footer>
+		<script>
+				(function() {
+	
+					var globalMenu = document.querySelector('.global-menu-button');
+					var globalNav = document.getElementById('global-nav');
+	
+					globalMenu.addEventListener('click', function() {
+						
+						if (globalNav.classList.contains('active')) {
+	
+							globalNav.classList.remove('active');
+						}
+						else {
+	
+							globalNav.classList.add('active');
+						}
+	
+					});
+				})();
+	
+			</script>
 	</body>
 </html>

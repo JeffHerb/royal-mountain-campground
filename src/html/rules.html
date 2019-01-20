@@ -102,11 +102,32 @@
 			</section>
 		</main>
 		<footer>
-				<section class="container">
-					<p>
-						Royal Mountain Campground / TDX Data Service - All Rights Reserved - 2017-2018
-					</p>
-				</section>
-			</footer>
+			<section class="container">
+				<p>
+					Royal Mountain Campground / TDX Data Service - All Rights Reserved - 2017-2018
+				</p>
+			</section>
+		</footer>
+		<script>
+			(function() {
+
+				var globalMenu = document.querySelector('.global-menu-button');
+				var globalNav = document.getElementById('global-nav');
+
+				globalMenu.addEventListener('click', function() {
+					
+					if (globalNav.classList.contains('active')) {
+
+						globalNav.classList.remove('active');
+					}
+					else {
+
+						globalNav.classList.add('active');
+					}
+
+				});
+			})();
+
+		</script>
 	</body>
 </html>
