@@ -1,13 +1,20 @@
 .hero {
 	align-items: center;
-	background-image: url('../images/hero-test-image.jpg');
+	background-image: url('../images/hero.jpg');
 	background-size: cover;
-	background-position: center -250px;
+	background-position: -40px -200px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
 	height: 40vh;
 	text-align: center;
-	//width: 100vw;
+
+	@include pointbreak(600px) {
+		background-position: -80px -200px;
+	}
+
+	@include pointbreak(980px) {
+		background-position: center -200px;
+	}
 }
