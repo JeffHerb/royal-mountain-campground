@@ -1,13 +1,14 @@
 .hero {
 	align-items: center;
-	background-image: url('../images/hero.jpg');
+	background-image: url('../images/hero-mobile.jpg');
 	//background-size: cover;
-	background-position: -40px -150px;
+	background-position: -70px 0;
 	background-repeat: no-repeat;
 	//background-attachment: fixed;
 	display: flex;
 	justify-content: center;
-	height: 40vh;
+	height: 400px;
+	padding-bottom: 10px;
 	text-align: center;
 
 	@include pointbreak(600px) {
@@ -16,7 +17,8 @@
 
 	@include pointbreak(900px) {
 		background-size: cover;
-		background-position: center -100px;
-		height: 35vh;
+		//background-image: url('../images/hero-mobile.jpg');
+		background-position: 0;
+		height: 350px;
 	}
 }
