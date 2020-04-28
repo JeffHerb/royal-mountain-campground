@@ -306,3 +306,55 @@ section > section {
 		padding-bottom: 15px;
 	}
 }
+
+.blackout {
+	background: rgba($color: #000000, $alpha: .75);
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.blackout-content-outer {
+	height: 100%;
+	padding-top: 10%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+}
+
+.blackout-content-inner {
+	display: block;
+	margin: auto;
+	position: relative;
+	min-height: 100px;
+	max-width: 75vw;
+	min-width: 100px;
+}
+
+.blackout-content-container {
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	width: 100%;
+
+	p {
+		padding: 30px;
+	}
+}
+
+.blackout-close {
+	background: #fff;
+	border: 0;
+	display: inline-block;
+	font-size: 30px;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+}
